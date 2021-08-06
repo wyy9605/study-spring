@@ -18,6 +18,7 @@ public class MyServer {
 		    SocketChannel socketChannel =
 		            serverSocketChannel.accept();
 		    if(socketChannel!=null) {
+		    	//socketChannel.configureBlocking(false);
 			    buf.clear();
 			    int bytesRead  = socketChannel.read(buf);
 			    while(bytesRead>0){
